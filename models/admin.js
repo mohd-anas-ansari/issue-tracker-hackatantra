@@ -1,6 +1,7 @@
 // import { Schema, Mongoose } from "mongoose";
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
+
 var adminSchema = new Schema({
   username: {
     type: String,

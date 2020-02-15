@@ -1,6 +1,7 @@
 // import { Schema, Mongoose } from "mongoose";
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
+
 var issueSchema = new Schema({
   title: {
     type: String,
@@ -22,7 +23,8 @@ var issueSchema = new Schema({
   status: {
       type: String,
       enum: ["red", "amber", "green"]
-  }
+  },
+  dueBy: Date
 });
 
 var Issue = mongoose.model("Issue", issueSchema);
