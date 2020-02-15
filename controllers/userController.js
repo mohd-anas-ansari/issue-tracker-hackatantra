@@ -28,4 +28,17 @@ module.exports = {
           res.json(response);
         })
       },
+
+    /**
+	 * Delete user from the database. Pass username in a JSON object.
+	 */
+	deleteUser: (req, res) => {
+		const username = req.body.username;
+		console.log(username, "Username to be deleted");
+		User.findOneAndRemove({ username: username }, (err, response) => {
+			if (err) return err;
+			console.log(response, `User with username ${username} deleted`);
+			res.json(response);
+		});
+	}
 }
