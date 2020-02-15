@@ -63,11 +63,17 @@ button {
 
 body {
   font-family: 'Roboto', sans-serif;
+  background: #F6F1DE;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.header {
+  height: 60px;
+  background-color: #20345d;
 }
 
 .header_flex {
@@ -99,6 +105,19 @@ body {
   padding-top: 20px;
 }
 
+.user_info {
+  display: block;
+  padding: 8px 15px;
+  margin: 20px 0;
+  border: 0;
+  border-bottom: 1px solid #000;
+  outline: 0;
+  background: transparent;
+  font-size: 17px;
+  color: #080808;
+  font-weight: 550;
+}
+
 .form_heading {
   text-align: center;
   position: relative;
@@ -125,6 +144,9 @@ body {
 }
 
 .submit_btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 600;
   margin-top: 15px;
   width: 100%;
   outline: 0;
@@ -183,32 +205,13 @@ body {
   opacity: 1;
 }
 
-.header {
-  height: 60px;
-  background-color: #20345d;
-}
-
-.login_info {
-  display: block;
-  padding: 8px 15px;
-  margin: 20px 0;
-  border: 0;
-  border-bottom: 1px solid #000;
-  outline: 0;
-  background: transparent;
-  font-size: 17px;
-  color: #080808;
-  font-weight: 550;
-}
-
-.submit_btn {
-  padding: 8px 20px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.login_info:focus {
+.user_info:focus {
   -webkit-box-shadow: 0px 2px 8px 1px #000;
           box-shadow: 0px 2px 8px 1px #000;
+}
+
+.btn:hover, .submit_btn:hover {
+  -webkit-box-shadow: 5px 0px 10px #52ae5e;
+          box-shadow: 5px 0px 10px #52ae5e;
 }
 /*# sourceMappingURL=style.css.map */
