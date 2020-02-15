@@ -25,11 +25,11 @@ router.post('/login', function(req, res, next) {
 
 //Update User
 router.put("/:id", (req,res) => {
-  const ID = req.params.id;
-  console.log(ID, "from ID in Update")
-  User.findByIdAndUpdate(ID, (err, response) => {
+  const id = req.params.id;
+  console.log(id, "from ID in Update")
+  User.findByIdAndUpdate(id, { username: "threeEmail"},(err, response) => {
     if(err) return err;
-    // console.log(response)
+    console.log(response, "Inside Update")
     res.json(response);
   })
 })
