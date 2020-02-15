@@ -3,10 +3,25 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require("mongoose");
 
+//Requiring the routes
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/user');
+var adminRouter = require('./routes/admin')
 
+
+
+// connecting to database
+mongoose.connect(
+  "mongodb://localhost:27017/issues",
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  err => {
+    console.log("Connected", err ? err : true);
+  }
+);
+
+//Instantiaing Express
 var app = express();
 
 // view engine setup
@@ -19,8 +34,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+//Providing Paths
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);
+app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
