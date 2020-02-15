@@ -26,7 +26,11 @@ var issueSchema = new Schema({
       enum: ["red", "amber", "green"]
   },
   cratedOn: Date,
-  dueBy: Date
+  dueBy: Date,
+  isClosed: {
+    type: Boolean,
+    default: false
+  }
 });
 
 var Issue = mongoose.model("Issue", issueSchema);

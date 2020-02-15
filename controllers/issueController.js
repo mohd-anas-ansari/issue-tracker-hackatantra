@@ -16,5 +16,15 @@ module.exports = {
           if (err) return next(err);
           res.json(createdIssue);
         });
+      },
+
+    closeIssue: (req, res, next) => {
+        const issueId = req.body.id;
+        console.log(`ID of issue to be closed: ${issueId}`);
+        Issue.findByIdAndUpdate(issueId, { isClosed : true}, {new: true}, (err, closedIssue) => {
+          if (err) return err;
+          console.log(`Closed issue with id ${issueId}`);
+          res.json(closedIssue);
+        });
       }
 }
