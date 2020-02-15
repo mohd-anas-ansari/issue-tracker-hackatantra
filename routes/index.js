@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var Issue = require("../models/issue");
 
-/* GET home page. */
+//For /
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
+
 
 module.exports = router;

@@ -15,16 +15,22 @@ var issueSchema = new Schema({
 
   tags: [String],
 
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+  username: {
+    // type: mongoose.Schema.Types.username,
+    // ref: "User",
+    type: String
   },
 
   status: {
       type: String,
       enum: ["red", "amber", "green"]
   },
-  dueBy: Date
+  cratedOn: Date,
+  dueBy: Date,
+  isClosed: {
+    type: Boolean,
+    default: false
+  }
 });
 
 var Issue = mongoose.model("Issue", issueSchema);
