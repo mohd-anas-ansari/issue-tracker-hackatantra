@@ -12,5 +12,7 @@ router.get('/', issueController.issuesDisplay);
 //Create an Issue
 router.post("/create", issueController.createIssue);
 
+router.put("close", issueController.closeIssue);
+
   
 module.exports = router;
