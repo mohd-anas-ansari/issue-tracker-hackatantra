@@ -1,0 +1,177 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  outline: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_items {
+  margin-left: 40px;
+  color: blanchedalmond;
+  padding-top: 20px;
+}
+
+.form_heading {
+  text-align: center;
+  position: relative;
+  top: -90px;
+  font-size: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 3px;
+  outline: 0;
+  border-width: 0px;
+  color: midnightblue;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.logo {
+  color: blanchedalmond;
+  text-transform: uppercase;
+  font-size: 28px;
+  padding-top: 20px;
+}
+
+.user_icon {
+  position: relative;
+  left: 50%;
+  top: -125px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+  font-size: 70px;
+  padding: 10px;
+  border: 5px solid #333;
+  border-radius: 50%;
+  color: #333;
+}
+
+.submit_btn {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.form_wrapper {
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  background-color: lightcyan;
+  padding: 75px 60px;
+  border-radius: 8px;
+}
+
+.header {
+  height: 60px;
+  background-color: #080808;
+}
+
+.login_info {
+  display: block;
+  padding: 8px 15px;
+  margin: 20px 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #777;
+  font-size: 16px;
+  color: #080808;
+  font-weight: 550;
+}
+
+.submit_btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=style.css.map */
