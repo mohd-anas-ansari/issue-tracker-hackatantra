@@ -2,7 +2,7 @@
 
 .header {
     height: 60px;
-    background-color: rgb(8,8,8);
+    background-color: $headerBackground;
 }
 
 // Login Form
@@ -12,10 +12,11 @@
     padding: 8px 15px;
     margin: 20px 0;
     border: 0;
+    border-bottom: 1px solid #000;
     outline: 0;
     background: transparent;
-    border-bottom: 1px solid #777;
-    font-size: 16px;
+    
+    font-size: 17px;
     color: rgb(8,8,8);
     font-weight: 550;
 }
@@ -23,6 +24,11 @@
 .submit_btn {
     padding: 8px 20px;
     border-radius: 4px;
+    font-weight: 600;
+}
+
+.login_info:focus {
+    box-shadow: 0px 2px 8px 1px #000;
 }
 
 

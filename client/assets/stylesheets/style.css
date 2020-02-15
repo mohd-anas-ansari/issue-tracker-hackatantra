@@ -61,6 +61,10 @@ button {
   outline: 0;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -98,7 +102,7 @@ button {
 .form_heading {
   text-align: center;
   position: relative;
-  top: -90px;
+  top: -30px;
   font-size: 28px;
 }
 
@@ -120,25 +124,13 @@ button {
   padding-top: 20px;
 }
 
-.user_icon {
-  position: relative;
-  left: 50%;
-  top: -125px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #fff;
-  font-size: 70px;
-  padding: 10px;
-  border: 5px solid #333;
-  border-radius: 50%;
-  color: #333;
-}
-
 .submit_btn {
-  position: relative;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  margin-top: 15px;
+  width: 100%;
+  outline: 0;
+  border-width: 0;
+  background-color: #3542fc;
+  color: #fff;
 }
 
 .form_wrapper {
@@ -147,14 +139,53 @@ button {
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
-  background-color: lightcyan;
-  padding: 75px 60px;
-  border-radius: 8px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#5bdcdf), color-stop(#7477ec), to(#ea78fe));
+  background: linear-gradient(to bottom right, #5bdcdf, #7477ec, #ea78fe);
+  padding: 50px 60px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 10px #000000;
+          box-shadow: 2px 2px 10px #000000;
+}
+
+::-webkit-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+::placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
 }
 
 .header {
   height: 60px;
-  background-color: #080808;
+  background-color: #20345d;
 }
 
 .login_info {
@@ -162,10 +193,10 @@ button {
   padding: 8px 15px;
   margin: 20px 0;
   border: 0;
+  border-bottom: 1px solid #000;
   outline: 0;
   background: transparent;
-  border-bottom: 1px solid #777;
-  font-size: 16px;
+  font-size: 17px;
   color: #080808;
   font-weight: 550;
 }
@@ -173,5 +204,11 @@ button {
 .submit_btn {
   padding: 8px 20px;
   border-radius: 4px;
+  font-weight: 600;
+}
+
+.login_info:focus {
+  -webkit-box-shadow: 0px 2px 8px 1px #000;
+          box-shadow: 0px 2px 8px 1px #000;
 }
 /*# sourceMappingURL=style.css.map */
