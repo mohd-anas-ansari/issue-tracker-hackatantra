@@ -1,0 +1,214 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  outline: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_items {
+  margin-left: 40px;
+  color: blanchedalmond;
+  padding-top: 20px;
+}
+
+.form_heading {
+  text-align: center;
+  position: relative;
+  top: -30px;
+  font-size: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 3px;
+  outline: 0;
+  border-width: 0px;
+  color: midnightblue;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.logo {
+  color: blanchedalmond;
+  text-transform: uppercase;
+  font-size: 28px;
+  padding-top: 20px;
+}
+
+.submit_btn {
+  margin-top: 15px;
+  width: 100%;
+  outline: 0;
+  border-width: 0;
+  background-color: #3542fc;
+  color: #fff;
+}
+
+.form_wrapper {
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  background: -webkit-gradient(linear, left top, right bottom, from(#5bdcdf), color-stop(#7477ec), to(#ea78fe));
+  background: linear-gradient(to bottom right, #5bdcdf, #7477ec, #ea78fe);
+  padding: 50px 60px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 10px #000000;
+          box-shadow: 2px 2px 10px #000000;
+}
+
+::-webkit-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+::placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.header {
+  height: 60px;
+  background-color: #20345d;
+}
+
+.login_info {
+  display: block;
+  padding: 8px 15px;
+  margin: 20px 0;
+  border: 0;
+  border-bottom: 1px solid #000;
+  outline: 0;
+  background: transparent;
+  font-size: 17px;
+  color: #080808;
+  font-weight: 550;
+}
+
+.submit_btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.login_info:focus {
+  -webkit-box-shadow: 0px 2px 8px 1px #000;
+          box-shadow: 0px 2px 8px 1px #000;
+}
+/*# sourceMappingURL=style.css.map */
