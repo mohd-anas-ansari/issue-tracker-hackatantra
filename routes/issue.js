@@ -12,5 +12,8 @@ router.get('/', issueController.issuesDisplay);
 //Create an Issue
 router.post("/create", issueController.createIssue);
 
+// Update issue status
+router.put("/status", issueController.updateIssue);
+
   
 module.exports = router;
