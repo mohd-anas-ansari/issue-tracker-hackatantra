@@ -17,7 +17,7 @@ var issueSchema = new Schema(
     tags: [String],
 
     userId: {
-      type: mongoose.Schema.Types.username,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
     },
 
