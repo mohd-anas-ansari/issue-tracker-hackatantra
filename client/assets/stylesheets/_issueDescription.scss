@@ -1,0 +1,48 @@
+.desc_card_wrapper {
+    padding: 1.5rem 2rem;
+}
+
+.desc_card_username {
+    font-size: 1.25rem;
+}
+
+.desc_card_title {
+    font-size: 1.8rem;
+    font-weight: 100;
+    padding: 2rem 0;
+}
+
+.desc_card_para {
+    font-weight: 1.01rem;
+    padding-bottom: 2rem;
+}
+
+.desc_card_info {
+
+    font-size: 1.30rem;
+}
+
+.desc_create_date {
+    font-size: 1rem;
+}
+
+.review {
+    width: 41%;
+    outline: 0;
+    position: relative;
+    left: 28%;
+    bottom: 5rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 6px;
+    resize: none;
+    border: 1px solid lightgray;
+    background-color: #fafafa;
+}
+
+.desc_submit_btn {
+    width: 10%;
+    position: relative;
+    bottom: 3rem;
+    left: 1rem;
+}
