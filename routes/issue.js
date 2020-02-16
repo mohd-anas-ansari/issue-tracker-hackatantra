@@ -18,5 +18,8 @@ router.post("/create", issueController.createIssue);
 // Update issue status
 router.put("/status", issueController.updateIssue);
 
+// Toggle plus one status
+router.put("/plusone", issueController.togglePlusOne);
+
   
 module.exports = router;
