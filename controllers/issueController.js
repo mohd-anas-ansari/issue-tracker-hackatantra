@@ -31,6 +31,24 @@ module.exports = {
           res.json(updatedIssue);
         });
       });
-    }
+    },
+
+    togglePlusOne: (req, res, next) => {
+      console.log("Trying to toggle plus one", req.body);
+      const username = req.body.username;
+      const issueId = req.body.issueId;
+      Issue.findOne({_id: issueId}, (err, issue)  => {
+        if (err) return next(err);
+        console.log("makeba", issue.plusOnes);
+        let isPlusOneActive = issue.plusOnes.filter(plusone => plusone.username == username).length > 0;
+        if (isPlusOneActive) {
+          issue.plusOnes = issue.plusOnes.filter(plusone => plusone.username != username);
+        } else {
+          issue.plusOnes.push({username});
+        }
+        issue.save();
+        res.json(issue);
+      });
+    },
 
 }
