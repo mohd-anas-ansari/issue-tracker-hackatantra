@@ -26,6 +26,16 @@ var issueSchema = new Schema(
       inProgress: { type: Boolean, default: false },
       done: { type: Boolean, default: false },
     },
+    comments: [{
+      username: {
+        type: String,
+        required: true
+      },
+      text: {
+        type: String,
+        required: true
+      }
+    }],
     dueBy: Date,
   },
   { timestamps: true },

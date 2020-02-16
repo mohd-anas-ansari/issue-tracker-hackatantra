@@ -18,5 +18,8 @@ router.post("/create", issueController.createIssue);
 // Update issue status
 router.put("/status", issueController.updateIssue);
 
+// Add comment
+router.put("/comment", issueController.addComment);
+
   
 module.exports = router;
