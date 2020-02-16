@@ -12,5 +12,8 @@ router.get('/', issueController.issuesDisplay);
 //Create an Issue
 router.post("/create", issueController.createIssue);
 
+// Review an issue
+router.put("/review", issueController.reviewIssue);
+
   
 module.exports = router;
