@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Title -->
+
+    <title>:: Issue Tracker</title>
+
+    <!-- CSS Link -->
+
+    <link rel="stylesheet" href="./assets/stylesheets/style.css">
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,700i&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header -->
+
+    <header class="header">
+        <div class="container header_flex">
+            <div class="logo_wrapper">
+                <h3 class="logo"> Issue Tracker </h3>
+            </div>
+            
+                <ul class="menu menu_flex">
+                    <li class="menu_items">Name</li>
+                    <li class="menu_items">
+                        <button class="btn">Log Out</button>
+                    </li>
+                </ul>
+        </div>
+    </header>
+
+    <main>
+        
+        <section>
+            
+           
+                
+                <!-- Side Bar -->
+                
+                
+                <div class="feed_dropdown container">
+                    <input type="checkbox" id="toggle_issuelist">
+                    <label for="toggle_issuelist">
+                        <div class="dropdown_btn">
+                            Issues<i class="fas fa-sort-down arrow_down"></i>
+                        </div>
+                    </label>
+                    <ul class="issue_dropdown">
+                        <label for="water_issue_toggle" class="water">
+                            <li class="feed_issue_list">Water</li>
+                        </label>
+                        <input type="checkbox" value="water" id="water_issue_toggle">
+                        
+                        <label for="electricity_issue_toggle">
+                            <li class="feed_issue_list">Electricity</li>
+                        </label>
+                        <input type="checkbox" value="electricity" id="electricity_issue_toggle">
+    
+                        <label for="food_issue_toggle">
+                            <li class="feed_issue_list">Food</li>
+                        </label>
+                        <input type="checkbox" value="food" id="food_issue_toggle">
+    
+                        <label for="washing_issue_toggle">
+                            <li class="feed_issue_list">Washing Machine</li>
+                        </label>
+                        <input type="checkbox" value="washing" id="washing_issue_toggle">
+                    </ul>
+                </div>
+                
+                <!-- cards -->
+                <div class="cards">
+                    
+                    <!-- Each Card -->
+
+                    <div class="card_wrapper card_wrapper_flex">
+                        <h3 class="card_username">@Username</h3>
+                        <h1 class="card_title">Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum placeat atque accusamus laborum fuga?</h1>
+                        
+                        <ul class="card_tag_list card_tag_flex">
+                            <li class="card_tags">#tag1</li>
+                            <li class="card_tags">#tag2</li>
+                            <li class="card_tags">#tag3</li>
+                            <li class="card_tags">#tag4</li>
+                            <li class="card_tags">#tag5</li>
+                        </ul>
+                        <div class="flex">
+                            <pre class="card_info">Created : </pre>
+                            <date class="create_date">15.02.2020</date>
+                            
+                            <pre class="card_info">Due By : </pre>
+                            <date class="create_date">18.02.2020</date>
+                            
+                            <pre class="card_info status">Status : </pre>
+                            <p class="status_color">Status 1</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            
+        </section>
+        
+
+    </main>
+
+    <!-- Font Awesome -->
+
+    <script src="https://kit.fontawesome.com/56c102e6b2.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
