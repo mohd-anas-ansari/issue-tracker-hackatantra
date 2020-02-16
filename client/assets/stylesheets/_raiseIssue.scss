@@ -1,0 +1,73 @@
+.issue_form {
+    width: 33%;
+}
+
+.issue_form .user_info {
+    width: 95%;
+    font-size: 1.25rem;
+    margin: 2.5rem 0;
+}
+
+.issue_form .user_info:first-child {
+    font-size: 2.375px;
+}
+
+.dropdown_btn option {
+    background-color: rgb(240, 236, 204);
+}
+
+.add_tag_wrapper .dropdown_btn{
+    width: 100%;
+    text-align: center;
+}
+
+.issue_form .submit_btn {
+    width: 25%;
+    margin-top: 3.75rem;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tags {
+    display: none;
+}
+
+.tag_label {
+    padding: 0.625rem 0.9375rem;
+    border-radius: 0.125rem;
+    box-shadow: 0.0625rem 0px 0.1875rem 0 #000;
+}
+
+
+#tag_toggle {
+    display: none;
+}
+
+#tag_toggle:checked ~ .tags {
+    display: block;
+}
+
+@media all and (max-width : 768px) {
+    
+    body {
+        font-size: 4px;
+    }
+    .issue_form {
+        width: 55%;
+        padding: 0 1rem;
+        margin: 0;
+    }
+
+    select {
+        width: 8rem;
+    }
+
+    .submit_btn, .select_issue {
+        font-size: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+
+

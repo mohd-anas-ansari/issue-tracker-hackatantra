@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Title -->
+
+    <title>:: Issue Tracker</title>
+
+    <!-- CSS Link -->
+
+    <link rel="stylesheet" href="./assets/stylesheets/style.css">
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,700i&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    <!-- Header -->
+
+    <header class="header">
+        <div class="container header_flex">
+            <div class="logo_wrapper">
+                <h3 class="logo"> Issue Tracker </h3>
+            </div>
+            
+                <ul class="menu menu_flex">
+                    <li class="menu_items">Name</li>
+                    <li class="menu_items">
+                        <button class="btn">Log Out</button>
+                    </li>
+                </ul>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Raise an Issue Form -->
+
+        <section class="form_section">
+           
+            <div class="container form_wrapper issue_form">
+                
+
+                <form class="login_from">
+                    <h3 class="heading">Your Issue</h3>
+                    <input type="text" placeholder="Title" class="user_info">
+
+                    <textarea name="issue_description" placeholder="Describe" cols="22" rows="6" class="user_info" style="resize: none;"></textarea>
+
+                    <div class="add_tag_wrapper">
+                        <select name="select_issue" id="select_issue" class="dropdown_btn">
+                            <option value="0">SELECT ISSUE</option>
+                            <option value="water">Water</option>
+                            <option value="elctricity">Electricity</option>
+                            <option value="food">Food</option>
+                         </select>
+                    </div>
+
+                    <input type="submit" class="submit_btn" value="Submit">
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+
+<!-- Font Awesome Link -->
+
+<script src="https://kit.fontawesome.com/56c102e6b2.js" crossorigin="anonymous"></script>  
+</body>
+</html>
