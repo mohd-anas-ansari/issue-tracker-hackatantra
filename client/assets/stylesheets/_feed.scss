@@ -1,0 +1,223 @@
+.cards {
+    max-width: 43.75rem;
+    margin: 8rem auto;
+    border-radius: 0.1rem;
+    background-color: $cardBackgroundColor;
+    box-shadow: 0px 0.03rem 0.1875rem #ccc;
+    padding: 0.625rem 1.57rem  ;
+}
+
+.card_title {
+    padding: 0.625rem 0;
+}
+
+
+.card_tag_flex {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;  
+}
+
+.card_tags {
+    flex-basis: 12%;
+    margin: 1%;
+    padding: 0.1%;
+    background-color: #fafafa;
+    text-align: center;
+    box-shadow: 0rem 0rem 0.157rem #333;
+}
+
+.card_username {
+    font-size: 1.01rem;
+    background-color: rgb(255,255,255);
+    text-transform: lowercase;
+    padding-top: 0.625rem;
+}
+
+.card_title {
+    font-size: 1.2rem;
+    font-weight: 450;
+    padding: 0.5rem 0rem 0.8rem 0;
+}
+
+// Right Side of the card
+
+.right {
+    flex-basis: 15%;
+    text-align: center;
+    padding-top: 1.5625rem;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+    background-color: #fafafa;
+}
+
+.card_infos {
+    padding: 0.5rem 1.1rem;
+}
+
+.due_by {
+    padding-bottom: 1rem;
+}
+
+.card_infos,.due_by,.create_date,.status_color {
+    font-size: 1rem;
+}
+
+.feed_dropdown {
+    position: absolute;
+    right: 20%;
+    top: 20%;
+}
+
+.issue_list {
+    width: 200%;
+    padding: 0.5rem 0;
+    outline: 0;
+    // text-align: center; 
+}
+
+
+.status_color {
+    flex-basis: 15%;
+    text-align: center;
+    border-radius: 0.6rem;
+    font-size: 0.7rem;
+    color: #fff;
+    
+}
+
+.create_date, .due_by {
+    font-size: 0.8rem;
+    margin-right: 1.5rem;
+}
+
+.create_date, .due_by, .card_info, .status_color {
+    margin-top: 1rem; 
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dropdown_btn {
+    cursor: pointer;
+    outline: 0;
+    padding: 6px 25px;
+    background-color: rgb(206, 199, 199);
+    border-radius: 2.5px;
+}
+
+
+.arrow_down {
+    margin-left: 1.2rem;
+    font-size: 1.2rem;
+    padding: 0.1rem;
+}
+
+.issue_dropdown {
+    display: none;
+}
+
+#toggle_issuelist {
+    display: none;
+}
+
+#toggle_issuelist:checked ~ .issue_dropdown {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+.feed_issue_list {
+    padding: 0.08rem 0;
+    border-bottom: 0.5px dotted #000;
+    background-color: honeydew;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.feed_issue_list:last-child {
+    border-bottom-width: 0;
+}
+
+@media all and (max-width: 784px) {
+    body {
+        font-size: 8px;
+    }
+
+    .cards {
+        max-width: 20rem;
+        margin-top: 10rem;
+    }
+
+    .status {
+        display: none;
+    }
+
+    .status_color { 
+        flex-basis: 20%;
+        text-align: center;
+        border-radius: 0.5rem;
+        font-size: 0.4rem;
+        color: #fff;   
+    }
+
+
+
+    .feed_dropdown {
+        position: absolute;
+        right: 15%;
+        top: 25%;
+    }
+
+    .feed_dropdown, .dropdown_btn {
+        width: 7rem;
+        text-align: center;
+    }
+    
+    
+}
+
+@media all and (min-width: 760px) and (max-width: 1024px) {
+    
+    body {
+        font-size: 8px;
+    }
+
+    .cards {
+        max-width: 40rem;
+        margin-top: 10%;
+    }
+
+    .status {
+        display: none;
+    }
+
+    .status_color { 
+        flex-basis: 20%;
+        text-align: center;
+        border-radius: 0.5rem;
+        font-size: 0.4rem;
+        color: #fff;   
+    }
+
+    .issue_list {
+        width: 10%;
+    }
+
+    .feed_dropdown {
+        position: absolute;
+        right: 20%;
+        top: 10%;
+    }
+
+    .feed_dropdown, .dropdown_btn {
+        width: 7rem;
+        text-align: center;
+    }
+}
+
