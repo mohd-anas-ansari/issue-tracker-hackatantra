@@ -1,4 +1,5 @@
 var Issue = require("../models/issue");
+var Admin = require("../models/admin");
 
 module.exports = {
     issuesDisplay: function(req, res, next) {
@@ -16,5 +17,20 @@ module.exports = {
           if (err) return next(err);
           res.json(createdIssue);
         });
-      }
+      },
+
+    updateIssue: (req, res) => {
+      console.log("Trying to update issue", req.body);
+      const username = req.body.username;
+      const issueId = req.body.issueId;
+      const newStatus = req.body.status; // Permitted values are "raised", "in_progress" and "closed"
+      Admin.findOne({username: username}, (err, admin)  => {
+        if (err) return err;
+        Issue.findOneAndUpdate({_id: issueId}, {status: newStatus}, {new: true}, (err, updatedIssue) => {
+          if (err) return err;
+          res.json(updatedIssue);
+        });
+      });
+    }
+
 }
