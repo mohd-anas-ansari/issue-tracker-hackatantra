@@ -31,6 +31,17 @@ module.exports = {
           res.json(updatedIssue);
         });
       });
-    }
+    },
+
+    addComment: (req, res, next) => {
+      console.log("Trying to add comment", req.body);
+      const username = req.body.username;
+      const issueId = req.body.issueId;
+      const text = req.body.text;
+      Issue.findOneAndUpdate({_id: issueId}, {"$push": {"comments": {username, text}}}, {new: true}, (err, updatedIssue)  => {
+        if (err) return next(err);
+        res.json(updatedIssue);
+      });
+    },
 
 }
