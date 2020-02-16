@@ -5,9 +5,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
+//Requiring the routes
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/user');
+var adminRouter = require('./routes/admin');
+var issueRouter = require('./routes/issue');
 
+//Instantiaing Express
 var app = express();
 
 // view engine setup
@@ -50,8 +54,10 @@ mongoose.connect(
   },
 );
 
+app.use('/api/v1/admin', adminRouter);
+app.use('/api/v1/user', usersRouter);
+app.use('/api/v1/issue', issueRouter);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

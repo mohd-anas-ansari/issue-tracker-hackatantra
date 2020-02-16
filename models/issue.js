@@ -15,15 +15,17 @@ var issueSchema = new Schema({
 
   tags: [String],
 
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+  username: {
+    // type: mongoose.Schema.Types.username,
+    // ref: "User",
+    type: String
   },
 
   status: {
       type: String,
       enum: ["red", "amber", "green"]
   },
+  cratedOn: Date,
   dueBy: Date
 });
 
