@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import validator from 'validator';
 
 class AdminLogin extends Component {
   constructor(props) {
@@ -22,6 +23,18 @@ class AdminLogin extends Component {
       email: this.state.email,
       password: this.state.password,
     };
+
+    if (!adminCredentials.email || !adminCredentials.password) {
+      return alert('Please enter all admin credentials');
+    }
+
+    if (!validator.isEmail(adminCredentials.email)) {
+      return alert('Please enter valid admin email');
+    }
+
+    if (adminCredentials.password.length < 6) {
+      return alert('Please enter valid admin password');
+    }
 
     fetch('http://localhost:3000/api/v1/admin/login', {
       method: 'POST',

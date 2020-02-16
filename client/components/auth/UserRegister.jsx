@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import validator from 'validator';
 
 class UserRegister extends Component {
   constructor(props) {
@@ -25,6 +26,26 @@ class UserRegister extends Component {
       password: this.state.password,
     };
 
+    if (
+      !userCredentials.username ||
+      !userCredentials.email ||
+      !userCredentials.password
+    ) {
+      return alert('Please enter all credentials');
+    }
+
+    if (userCredentials.username.length < 6) {
+      return alert('Please enter valid username');
+    }
+
+    if (!validator.isEmail(userCredentials.email)) {
+      return alert('Please enter valid email');
+    }
+
+    if (userCredentials.password.length < 6) {
+      return alert('Please enter valid password');
+    }
+
     fetch('http://localhost:3000/api/v1/user/register', {
       method: 'POST',
       body: JSON.stringify(userCredentials),
@@ -34,7 +55,7 @@ class UserRegister extends Component {
     })
       .then(res => res.json())
       .then(user => {
-        // localStorage.setItem('token', admin.token);
+        // localStorage.setItem('token', user.token);
         console.log(user, 'user registered');
       });
   };
